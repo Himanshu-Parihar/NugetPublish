@@ -39,4 +39,4 @@ jobs:
    #   run: dotnet pack ${{ env.PROJECT_PATH }} --no-restore --no-build --configuration Release --include-symbols -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
 
     - name: 'Push package'
-      run: dotnet nuget push .\Harrydummytest2022.nupkg -k ${{ secrets.NUGET_AUTH2 }} -s ${{ env.NUGET_SOURCE_URL }}
+      run: dotnet nuget push .\Harrydummytest2022.nupkg -k oy2j3ko55bpgpjckqfmajuzwm7en532ejf3hr6ry2j3rx4 -s ${{ env.NUGET_SOURCE_URL }}
