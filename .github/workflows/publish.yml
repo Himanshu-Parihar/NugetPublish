@@ -1,8 +1,20 @@
-  publish:
-    name: build, pack & publish
-    runs-on: ubuntu-latest
+name: "Deploy to NuGet"
+
+on:
+#  push: 
+   
+ #   tags:
+  #   - 'v*'
+  workflow_dispatch:
+  
+
+jobs:
+  deploy:
+    name: 'Deploy'
+    runs-on: 'windows-latest'
     steps:
-      - uses: actions/checkout@v2
+      - name: build, pack & publish
+        uses: actions/checkout@v2
 
       # - name: Setup dotnet
       #   uses: actions/setup-dotnet@v1
