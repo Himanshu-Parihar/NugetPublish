@@ -26,8 +26,8 @@ jobs:
       - name: New Project
         run: dotnet new console --name harryPubNuget
         
-      - name: package the project
-        run: dotnet pack --configuration Release
+#      - name: package the project
+ #       run: dotnet pack --configuration Release
       
       - name: Publish the package with PAT
         run: dotnet nuget push .\Harrydummytest2022.nupkg  --api-key Nuget_PUBLISH --source "github"
